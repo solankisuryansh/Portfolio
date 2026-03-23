@@ -36,7 +36,7 @@ export default function Footer() {
             © {currentYear} Suryansh Solanki. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm text-slate-500">
-            <span>Built with React & Tailwind CSS</span>
+            {/* <span>Built with React & Tailwind CSS</span> */}
           </div>
         </div>
       </div>
