@@ -7,7 +7,7 @@ export default function Certifications() {
     {
       title: "Introduction to Internet of Things",
       issuer: "IIT Kharagpur (NPTEL)",
-      link: "#"
+      link: "https://drive.google.com/file/d/1KU5Y26Txeyn3bql2XZxliZIweYNcrB8l/view?usp=sharing"
     },
     {
       title: "Oracle Certified Professional",

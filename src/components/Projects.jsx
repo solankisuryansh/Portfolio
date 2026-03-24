@@ -9,6 +9,7 @@ export default function Projects() {
       description: "Developed a Java-based desktop application using Swing. Implemented event scheduling using PriorityQueue (Min-Heap) and added popup and voice alerts for reminders.",
       techStack: ["Java", "Swing", "Data Structures"],
       github: "https://github.com/solankisuryansh/Event-Reminder-System",
+      image: "/event-reminder.png",
       imageGrad: "from-blue-500 to-indigo-600"
     },
     {
@@ -16,6 +17,7 @@ export default function Projects() {
       description: "Personalized Diet Coaching System. Built a web-based system that provides customized diet plans based on BMI and user data. Integrated a nutrition API to fetch real-time calorie and nutrient details.",
       techStack: ["Web Development", "REST API", "JavaScript", "HTML/CSS"],
       github: "https://github.com/solankisuryansh/NutriMind-AI",
+      image: "/nutrimind-ai.png",
       imageGrad: "from-emerald-400 to-teal-600"
     }
   ];
@@ -65,12 +67,27 @@ export default function Projects() {
               whileHover={{ y: -8 }}
               className="group flex flex-col bg-slate-50 dark:bg-slate-800/80 rounded-3xl border border-slate-100 dark:border-slate-700/80 shadow-lg hover:shadow-2xl transition-all overflow-hidden backdrop-blur-sm"
             >
-              {/* Project Image Placeholder */}
-              <div className={`w-full h-56 md:h-64 bg-gradient-to-br ${project.imageGrad} relative overflow-hidden flex items-center justify-center p-6`}>
-                <div className="absolute inset-0 bg-black/10 transition-opacity group-hover:opacity-0" />
-                <div className="w-full h-full bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl flex flex-col items-center justify-center text-white/90 transform group-hover:scale-105 transition-transform duration-500">
-                  <Layers className="w-16 h-16 drop-shadow-md opacity-80 mb-2" />
-                  <span className="font-bold tracking-wider uppercase text-sm opacity-90 drop-shadow-md">Screenshot Placeholder</span>
+              {/* Project Image Layout */}
+              <div className={`w-full h-56 md:h-64 bg-slate-100 dark:bg-slate-800 relative overflow-hidden flex items-center justify-center p-0`}>
+                
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 z-10"
+                  onError={(e) => {
+                    e.target.onerror = null; 
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+
+                {/* Fallback Gradient (Shows if image fails to load) */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${project.imageGrad} hidden flex-col items-center justify-center z-0 p-6`}>
+                  <div className="absolute inset-0 bg-black/10 transition-opacity group-hover:opacity-0" />
+                  <div className="w-full h-full bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl flex flex-col items-center justify-center text-white/90 transform group-hover:scale-105 transition-transform duration-500">
+                    <Layers className="w-16 h-16 drop-shadow-md opacity-80 mb-2" />
+                    <span className="font-bold tracking-wider uppercase text-sm opacity-90 drop-shadow-md">Screenshot Missing</span>
+                  </div>
                 </div>
               </div>
               

@@ -139,12 +139,7 @@ export default function Hero() {
             {/* Main Avatar Container */}
             <div className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-full p-2 bg-gradient-to-tr from-blue-400 via-indigo-500 to-purple-500 shadow-2xl shadow-primary/40 group">
               <div className="w-full h-full rounded-full bg-slate-100 dark:bg-slate-900 border-4 border-white dark:border-slate-800/50 flex flex-col items-center justify-center relative overflow-hidden">
-                {/* Fallback image if user adds profile.jpg to public folder */}
-                <img src="/profile.jpg" alt="Profile" className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-10 transition-opacity duration-300 z-0" onError={(e) => { e.target.style.display = 'none'; }} />
-                
-                {/* Developer Illustration */}
-                <Code2 className="w-24 h-24 text-primary opacity-90 group-hover:scale-110 transition-transform duration-500 z-10" />
-                <span className="text-2xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400 mt-2 z-10 group-hover:scale-105 transition-transform duration-500">CODING</span>
+                <img src="/profile.jpeg" alt="Suryansh Solanki" className="absolute inset-0 w-full h-full object-cover z-20 group-hover:scale-110 transition-transform duration-500 rounded-full" />
               </div>
 
               {/* Orbiting Elements */}
